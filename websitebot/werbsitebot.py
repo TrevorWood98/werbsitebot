@@ -8,12 +8,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import requests
 import time
-PATH = (r"C:\Users\trevo\Desktop\websitebot\chromedriver.exe")
+PATH = (r"C:\Users\user\Desktop\websitebot\chromedriver.exe")
 
 while True:
     #initializing driver variable to install chrome driver and open url link
     driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver.get("https://nwok.vypeok.com/2022/10/20/vote-now-enid-area-miss-softball-presented-by-stevens-ford-poll-ends-10-30/")
+    driver.get("https://www.website.com")
 
     #function that goes to element on website and clicks on element
     def gotoElement(webID):
@@ -30,9 +30,9 @@ while True:
         time.sleep(4)
         #we have the ID's to both vote button and submit button, which
         #is the parameter we need for our function
-        gotoElement("PDI_answer51297738")
+        gotoElement("ButtonID")
    
-        gotoElement("pd-vote-button11223091")    
+        gotoElement("ButtonID")    
 
         #delete cookies and quit the chromeDriver get request        
         driver.delete_all_cookies()
